@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@theme inline {
+  --font-sans: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-display: var(--font-sans);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+:root {
+  color-scheme: light;
+
+  /* Paleta canônica de .docs/DESIGN.md */
+  --color-powder-petal: #eddcd2;
+  --color-linen: #fff1e6;
+  --color-soft-blush: #fde2e4;
+  --color-petal-frost: #fad2e1;
+  --color-light-cyan: #c5dedd;
+  --color-mint-cream: #dbe7e4;
+  --color-parchment: #f0efeb;
+  --color-alice-blue: #d6e2e9;
+  --color-pale-sky: #bcd4e6;
+  --color-powder-blue: #99c1de;
+
+  /* Texto com contraste suficiente sobre a paleta pastel */
+  --color-ink: #2a2320;
+
+  /* Tokens semânticos shadcn mapeados para a paleta do projeto */
+  --background: var(--color-linen);
+  --foreground: var(--color-ink);
+  --card: var(--color-parchment);
+  --card-foreground: var(--color-ink);
+  --popover: var(--color-parchment);
+  --popover-foreground: var(--color-ink);
+  --primary: var(--color-powder-blue);
+  --primary-foreground: var(--color-ink);
+  --secondary: var(--color-mint-cream);
+  --secondary-foreground: var(--color-ink);
+  --muted: var(--color-parchment);
+  --muted-foreground: var(--color-ink);
+  --accent: var(--color-soft-blush);
+  --accent-foreground: var(--color-ink);
+  --destructive: #8a1c13;
+  --border: var(--color-powder-petal);
+  --input: var(--color-powder-petal);
+  --ring: var(--color-powder-blue);
+  --chart-1: var(--color-powder-petal);
+  --chart-2: var(--color-light-cyan);
+  --chart-3: var(--color-mint-cream);
+  --chart-4: var(--color-alice-blue);
+  --chart-5: var(--color-powder-blue);
+  --radius: 0.625rem;
+}
+
+@layer base {
+  html {
+    @apply font-sans;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
